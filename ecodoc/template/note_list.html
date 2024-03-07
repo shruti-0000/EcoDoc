@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note List</title>
+    <link rel="stylesheet" href="{% static 'css/note_list.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Note List</h1>
+        <ul>
+            {% for note_id, note in notes.items %}
+                <li>
+                    {{ note.title }} - {{ note.content }}
+                    <a href="{ url 'note_delete' note.title }">delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <h2>Create New Note</h2>
+        <form method="post" action="{% url 'note_create' %}">
+            {% csrf_token %}
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content"></textarea><br>
+            <button type="submit">Create Note</button>
+        </form>
+    </div>
+</body>
+</html>

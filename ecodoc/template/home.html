@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href='{% static "css/home.css" %}'/>
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="div">
+        <div class="overlap">
+          <img class="ecodoc" src="{% static 'images/doc.jpg' %}"/>
+          <p class="ecodoc-our-paperless">
+            <span class="text-wrapper">EcoDoc<br /></span> <span class="span">Our Paperless Office</span>
+          </p>
+        </div>
+        <p class="about-us-we-provide">
+          <span class="text-wrapper-2">About us<br /></span>
+          <span class="text-wrapper-3"
+            >We provide a modern approach to digitizing and streamlining document management processes within
+            organizations.We aim to eliminate use of paper by implementing electronic document storage, retrieval and
+            collaboration systems
+          </span>
+        </p>
+        <div class="overlap-group"><div class="text-wrapper-4"><a href="{% url 'login_view' %}" style="text-decoration: none; color: white;">Start Working</a></div></div>
+      </div>
+    </div>
+  </body>
+</html>

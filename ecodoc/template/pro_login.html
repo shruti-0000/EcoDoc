@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Include CSS frameworks like Bootstrap here -->
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <div style="width: 100%; height: 100%; position: relative; background: white">
+        <div style="width: 369px; height: 1024px; left: 0px; top: -192px; position: absolute; background: linear-gradient(180deg, #0A9396 6%, rgba(10, 147, 150, 0) 100%)"></div>
+        <div class="s">
+            <button type="submit">
+                <div class="c" style="width: 415px; height: 89px; left: 623px; top: 474px; position: absolute; background: #0A9396; border-radius: 20px; cursor:pointer"></div>
+                <div style="width: 250px; height: 50px; left: 700px; top: 493px; position: absolute; color: white; font-size: 35px; font-family: Marcellus; font-weight: 400; word-wrap: break-word">SIGN IN</div>
+            </button>
+        </div>
+       
+        <div style="width: 415px; height: 89px; left: 623px; top: 166px; position: absolute; border-radius: 20px"></div>
+        <div style="left: 1067px; top: 500px; position: absolute; color: black; font-size: 35px; font-family: Marcellus; font-weight: 400; word-wrap: break-word">Forgot Password ?</div>
+        
+       
+        <div style="left: 616px; top: 49px; position: absolute; color: black; font-size: 35px; font-family: Marcellus; font-weight: 400; word-wrap: break-word;">LOGIN</div>
+        <div style="left: 653px; top: 210px; position: absolute; color: black; font-size: 35px; font-family: Marcellus; font-weight: 400; word-wrap: break-word;">Username :
+        <input type="text" required id="username" name="username" style="width: 350px;height: 40px; font-size: 20px;"></div>
+        <div style="left: 659px; top: 347px; position: absolute; color: black; font-size: 35px; font-family: Marcellus; font-weight: 400; word-wrap: break-word">Password :
+        <input type="password" id="password" name="password" style="width: 350px;height: 40px; font-size: 25px;"></div>
+        
+    </div>
+
+</form>
+
+{% if alert_message %}
+    <script>
+        alert("{{ alert_message }}");
+    </script>
+{% endif %}
+</body>
+</html>

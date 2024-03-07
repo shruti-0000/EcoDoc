@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/project.css' %}"/>
+    </head>
+    <body>
+        <div class="project-home-page">
+            <div class="div">
+                <div class="overlap">
+                    <div class="text-wrapper">My Project</div>
+                    <img class="image" src="{% static 'images/pro.png' %}"/>
+                </div>
+                <div class="overlap-group"><div class="text-wrapper-2"><a href="{{ google_drive_link }}" target="_blank">Documents</div></div>
+                <div class="div-wrapper"><div class="text-wrapper-3"><a href="{% url 'kanban' %}">Schedule</a></div></div>
+                <div class="overlap-2"><div class="text-wrapper-4"><a href="{% url 'dir' %}">Team Directory</a></div></div>
+                <div class="overlap-3">
+                    <div class="rectangle"></div>
+                    <div class="text-wrapper-5"><a href="{% url 'collab' %}">Collaborations</a></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

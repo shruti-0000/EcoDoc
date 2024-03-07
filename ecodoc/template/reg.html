@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/reg.css' %}" />
+        <script>
+            document.getElementById("reg").addEventListener("click", function() {
+              // Make an AJAX request to the same URL
+              fetch('', {
+                method: 'POST',
+                headers: {
+                  'X-Requested-With': 'XMLHttpRequest'  // Include this header to identify it as an AJAX request
+                },
+              })
+            });
+          </script>
+          
+    </head>
+    <body>
+	<form method="post">
+		{% csrf_token %}
+        <div class="ADMIN-CREDENTIALS">
+            <div class="div">
+                <div class="rectangle"></div>
+                <div class="overlap">
+					<br>
+					<br>
+					<br>
+                    <div class="text-wrapper-2">
+						<label for="username">Username:</label>
+        					<input type="text" name="email" id="email" required style="height: 30px; width: 350px;"><br><br>
+
+        				<label for="password">Password:</label>
+        					<input type="password" name="password" id="password" required style="height: 30px; width: 350px;"><br><br>
+
+        				<input type="submit" value="Register" id="reg" style="height: 40px; width: 200px; color: white; background-color: #0c9497;">
+					</div>
+                </div>
+            </div>
+        </div>
+	</form>
+		{% if alert_message %}
+        <script>
+            // Display an alert message using JavaScript
+            alert("{{ alert_message }}");
+        </script>
+    {% endif %}
+    </body>
+</html>

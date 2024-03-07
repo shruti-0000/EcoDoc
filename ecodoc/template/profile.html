@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="stylesheet" href='{% static "css/profile.css" %}' />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="div">
+        <div class="overlap">
+          <p class="my-profile"><span class="text-wrapper">My </span> <span class="span">Profile</span></p>
+          <img class="element-user-account" src="{% static 'images/user.svg' %}" />
+        </div>
+        <div class="overlap-group"><div class="text-wrapper-2"><a href="{% url 'info' %}">Personal Info</a></div></div>
+        <div class="overlap-group-2">
+          <div class="rectangle"></div>
+          <div class="text-wrapper-3"><a href="{{ white_board_link1 }}">My space</a></div>
+        </div>
+        <div class="overlap-2">
+          <div class="rectangle"></div>
+          <div class="text-wrapper-4">Signature</div>
+        </div>
+        <div class="div-wrapper"><div class="text-wrapper-5"><a href="{% url 'todo' %}">Notes</a></div></div>
+        <div class="overlap-3">
+          <div class="rectangle-2"></div>
+          <div class="text-wrapper-6"><a href="{% url 'project_login' %}">Project Login</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

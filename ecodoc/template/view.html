@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Uploaded Files</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/view.css' %}">
+</head>
+<body>
+    <h1>View Uploaded Files</h1>
+    
+    <form method="get" action="{% url 'view_files' %}">
+        <label for="project_key">Enter Project Key:</label>
+        <input type="password" name="project_key" required>
+        <button type="submit">View Files</button>
+    </form>
+
+    <h1>Files</h1>
+    <table id="file-table">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+            <tr>
+                <td>{{ file.name }}</td>
+                <td>
+                    <a href="{% url 'download_file' file.name %}">Download</a>
+                    <a href="{% url 'delete_file' file.name %}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No files found in this path.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const viewLinks = document.querySelectorAll('.view-link');
+
+            viewLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const fileName = this.getAttribute('data-file');
+                    // Call a function to interact with the React app passing fileName
+                    interactWithReactApp(fileName);
+                });
+            });
+        });
+
+        function interactWithReactApp(fileName) {
+            event.preventDefault();
+            // Your code to interact with the React app goes here
+            console.log('Interacting with React app for file:', fileName);
+            // For example, you can make a fetch request to your Django backend
+            fetch(`home/login.html/project.html/view.html/view/${fileName}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Process the response from the backend
+                    console.log('Response from backend:', data);
+                })
+                .catch(error => console.error('Error interacting with React app:', error));
+        }
+    </script>
+</body>
+</html>

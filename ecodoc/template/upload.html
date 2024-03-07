@@ -1,0 +1,11 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+    <input type="file" name="file">
+    <br>
+    <br>
+    <input type="password" name="project_key" required>
+    <br>
+    <br>
+    <button type="submit">Upload</button>
+</form>

@@ -1,0 +1,127 @@
+.desktop {
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    height: 75%;
+  }
+  
+  .desktop .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1000px;
+    position: relative;
+  }
+  
+  
+  .desktop .overlap {
+    position: absolute;
+    width: 1331px;
+    height: 312px;
+    top: 44px;
+    left: 42px;
+    background-image: url(./img/rectangle-1.png);
+    background-size: 100% 100%;
+    background-color: #0a9396;
+  }
+  
+  .desktop .ecodoc {
+    position: absolute;
+    width: 276px;
+    height: 248px;
+    top: 17px;
+    left: 19px;
+    object-fit: cover;
+    background-color: #0a9396;
+  }
+  
+  .desktop .ecodoc-our-paperless {
+    position: absolute;
+    width: 722px;
+    top: 38px;
+    left: 331px;
+    font-family: "Marcellus SC-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 75px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .text-wrapper {
+    font-family: "Marcellus SC-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 75px;
+    letter-spacing: 0;
+  }
+
+  
+  
+  .desktop .span {
+    font-size: 60px;
+  }
+  
+  .desktop .about-us-we-provide {
+    position: absolute;
+    width: 304px;
+    top: 431px;
+    left: 1005px;
+    font-family: "Marcellus SC-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop .text-wrapper-2 {
+    font-family: "Marcellus SC-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 35px;
+    letter-spacing: 0;
+  }
+  
+  .desktop .text-wrapper-3 {
+    font-family: "Marcellus-Regular", Helvetica;
+    font-size: 25px;
+  }
+  
+  .desktop .overlap-group {
+    position: absolute;
+    width: 639px;
+    height: 137px;
+    top: 546px;
+    left: 145px;
+    background-color: #0a9396;
+    border-radius: 30.79px;
+  }
+
+  .desktop .overlap-group:hover{
+    background-color: #076b6d;
+  }
+  
+  .desktop .text-wrapper-4 {
+    position: absolute;
+    width: 439px;
+    top: 31px;
+    left: 125px;
+    font-family: "Marcellus-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 53.9px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .desktop .text-wrapper-4 a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  
+
+ 
+  
